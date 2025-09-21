@@ -284,3 +284,5 @@ Here are the steps to shutdown the application.
 ## Final result:
 ![](result.gif)
 
+
+<img width="1918" height="971" alt="image" src="https://github.com/user-attachments/assets/073737c1-a70c-43f2-a4c5-7eb6193f6456" />
