@@ -1,4 +1,4 @@
-#   F1 Live Leaderboard Application
+#   Live Leaderboard Application
 
 This application provides a live view of an F1 racing leaderboard, along with detailed information about a selected driver. It uses a backend (Node.js with Express) to retrieve and process data from Confluent Cloud (Kafka) and a frontend (HTML/JavaScript) to display the information.
 
