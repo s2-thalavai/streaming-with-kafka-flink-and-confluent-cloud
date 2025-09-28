@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Driver Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dropdown (optional) */
+        .dropdown-options::-webkit-scrollbar {
+            width: 8px;
+        }
+        .dropdown-options::-webkit-scrollbar-track {
+            background: #2d3748; /* bg-gray-800 */
+        }
+        .dropdown-options::-webkit-scrollbar-thumb {
+            background: #4a5568; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        .dropdown-options::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* bg-gray-500 */
+        }
+        /* Add Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="w-full max-w-md bg-gray-800 rounded-xl shadow-2xl p-8">
+        <h1 class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 mb-8">
+            F1 Driver Support
+        </h1>
+        <p class="text-lg text-gray-300 mb-6 text-center">
+            Hi, Which driver are you supporting today?
+        </p>
+
+        <div class="relative" id="driverDropdownContainer">
+            <button id="dropdownButton" class="w-full bg-gray-700 hover:bg-gray-600 text-gray-200 font-medium py-3 px-4 rounded-lg inline-flex items-center justify-between transition-colors duration-150">
+                <span id="selectedDriver" class="flex items-center">
+                    <img id="selectedDriverLogo" src="https://placehold.co/32x32/4A5568/FFFFFF?text=🏁" alt="Selected driver" class="w-6 h-6 rounded-full mr-3">
+                    <span id="selectedDriverName">Select a driver</span>
+                </span>
+                <svg class="w-5 h-5 ml-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+
+            <div id="dropdownOptions" class="dropdown-options absolute hidden mt-1 w-full bg-gray-700 border border-gray-600 rounded-lg shadow-xl z-10 max-h-60 overflow-y-auto">
+                </div>
+        </div>
+
+        <button id="confirmSelectionButton" class="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-150 opacity-50 cursor-not-allowed" disabled>
+            View Leaderboard
+        </button>
+    </div>
+
+    <script>
+        // Driver data: name, team, and placeholder logo URL
+        const drivers = [
+            { name: "Max Verstappen", team: "Red Bull Racing", logo: "https://placehold.co/40x40/060053/FFFFFF?text=MV", teamColor: "#060053" },
+            { name: "Lewis Hamilton", team: "Mercedes-AMG Petronas", logo: "https://placehold.co/40x40/00A19C/FFFFFF?text=LH", teamColor: "#00A19C" },
+            { name: "Charles Leclerc", team: "Scuderia Ferrari", logo: "https://placehold.co/40x40/DC0000/FFFFFF?text=CL", teamColor: "#DC0000" },
+            { name: "Lando Norris", team: "McLaren Racing", logo: "https://placehold.co/40x40/FF8700/FFFFFF?text=LN", teamColor: "#FF8700" },
+            { name: "George Russell", team: "Mercedes-AMG Petronas", logo: "https://placehold.co/40x40/00A19C/FFFFFF?text=GR", teamColor: "#00A19C" },
+            { name: "Sergio Pérez", team: "Red Bull Racing", logo: "https://placehold.co/40x40/060053/FFFFFF?text=SP", teamColor: "#060053" },
+            { name: "Carlos Sainz Jr.", team: "Scuderia Ferrari", logo: "https://placehold.co/40x40/DC0000/FFFFFF?text=CS", teamColor: "#DC0000" },
+            { name: "Fernando Alonso", team: "Aston Martin Aramco", logo: "https://placehold.co/40x40/006F62/FFFFFF?text=FA", teamColor: "#006F62" },
+            { name: "Oscar Piastri", team: "McLaren Racing", logo: "https://placehold.co/40x40/FF8700/FFFFFF?text=OP", teamColor: "#FF8700" },
+            { name: "Yuki Tsunoda", team: "Visa Cash App RB", logo: "https://placehold.co/40x40/00327D/FFFFFF?text=YT", teamColor: "#00327D" }
+        ];
+
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownOptions = document.getElementById('dropdownOptions');
+        const selectedDriverNameElement = document.getElementById('selectedDriverName');
+        const selectedDriverLogo = document.getElementById('selectedDriverLogo');
+        const confirmSelectionButton = document.getElementById('confirmSelectionButton');
+        let isDropdownOpen = false;
+        let selectedDriver = null; // Store the selected driver object
+
+        // Function to populate dropdown options
+        function populateDropdown() {
+            drivers.forEach(driver => {
+                const optionElement = document.createElement('div');
+                optionElement.classList.add('p-3', 'hover:bg-gray-600', 'cursor-pointer', 'flex', 'items-center', 'transition-colors', 'duration-100');
+                optionElement.innerHTML = `
+                    <img src="${driver.logo}" alt="${driver.name}" class="w-6 h-6 rounded-full mr-3 border-2" style="border-color: ${driver.teamColor};">
+                    <span class="text-gray-200">${driver.name} <span class="text-xs text-gray-400 ml-1">(${driver.team})</span></span>
+                `;
+                optionElement.addEventListener('click', () => {
+                    selectDriver(driver);
+                });
+                dropdownOptions.appendChild(optionElement);
+            });
+        }
+
+        // Function to handle driver selection
+        function selectDriver(driver) {
+            selectedDriver = driver; // Store the driver object
+            selectedDriverNameElement.textContent = driver.name;
+            selectedDriverLogo.src = driver.logo;
+            selectedDriverLogo.alt = driver.name;
+            selectedDriverLogo.style.borderColor = driver.teamColor;
+            selectedDriverLogo.classList.remove('border-transparent');
+            toggleDropdown();
+
+            // Enable the confirm button
+            confirmSelectionButton.disabled = false;
+            confirmSelectionButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            confirmSelectionButton.classList.add('hover:bg-red-700');
+        }
+
+        // Function to toggle dropdown visibility
+        function toggleDropdown() {
+            isDropdownOpen = !isDropdownOpen;
+            if (isDropdownOpen) {
+                dropdownOptions.classList.remove('hidden');
+                dropdownButton.classList.add('rounded-b-none');
+            } else {
+                dropdownOptions.classList.add('hidden');
+                dropdownButton.classList.remove('rounded-b-none');
+            }
+        }
+
+        // Event listener for dropdown button
+        dropdownButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            toggleDropdown();
+        });
+
+        // Event listener to close dropdown if clicked outside
+        document.addEventListener('click', (event) => {
+            const dropdownContainer = document.getElementById('driverDropdownContainer');
+            if (isDropdownOpen && !dropdownContainer.contains(event.target)) {
+                toggleDropdown();
+            }
+        });
+
+        // Initial population of dropdown
+        populateDropdown();
+
+        // Handle click on confirm button to navigate to leaderboard
+        confirmSelectionButton.addEventListener('click', () => {
+            if (selectedDriver) {
+                const leaderboardUrl = `racing_leaderboard.html?driver=${encodeURIComponent(selectedDriver.name)}&teamColor=${encodeURIComponent(selectedDriver.teamColor)}`;
+                window.location.href = leaderboardUrl;
+            }
+        });
+    </script>
+</body>
+</html>
