@@ -282,7 +282,9 @@ Here are the steps to shutdown the application.
 * Go to Confluent Cloud and delete the topic "f1.leaderboard.results" and then delete the cluster and the environment.
 
 ## Final result:
-![](result.gif)
+
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/31108e4e-eea7-4816-8cb0-3c4dc3f5fd12" />
+
 
 ---
 
