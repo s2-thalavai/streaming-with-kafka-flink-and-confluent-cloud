@@ -289,3 +289,21 @@ Here are the steps to shutdown the application.
 ## Kafka Fundamentals
 
 <img width="1603" height="902" alt="image" src="https://github.com/user-attachments/assets/40903957-bbc3-404e-bc84-ae4329731826" />
+
+<img width="947" height="1022" alt="image" src="https://github.com/user-attachments/assets/57ae76c1-8978-4d4f-a579-4063f5c01372" />
+
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/5e437e15-c358-470b-98ad-db93f03128c8" />
+
+<img width="1913" height="872" alt="image" src="https://github.com/user-attachments/assets/b287a180-e903-47bf-9a74-743b2e618f3d" />
+
+<img width="1917" height="876" alt="image" src="https://github.com/user-attachments/assets/6d030ebb-cf67-471c-af1d-3aece7006d79" />
+
+<img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/062bd5a6-31f7-4651-8829-6237cf2f9f54" />
+
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/00b806c8-0ec6-4137-9e12-bd7bceff3d2f" />
+
+<img width="1918" height="992" alt="image" src="https://github.com/user-attachments/assets/9d53e70f-e691-4639-a7e9-d65642ce1aed" />
+
+<img width="1912" height="1018" alt="image" src="https://github.com/user-attachments/assets/a9d1d779-5fed-4dd9-a0cd-b924d4e546d2" />
+
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/e3223c1b-bcbd-4430-91d4-2ed2a6751b8e" />
