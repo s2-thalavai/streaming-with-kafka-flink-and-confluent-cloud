@@ -307,3 +307,44 @@ Here are the steps to shutdown the application.
 <img width="1912" height="1018" alt="image" src="https://github.com/user-attachments/assets/a9d1d779-5fed-4dd9-a0cd-b924d4e546d2" />
 
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/e3223c1b-bcbd-4430-91d4-2ed2a6751b8e" />
+
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/7650fd07-e5b3-4bc1-a9a1-b9f30d7989cf" />
+
+<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/0b6bb98a-a8a0-4003-a7d6-f39d4e2e8475" />
+
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/278017cb-25a2-4592-a522-af2dbb220593" />
+
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/9e843551-d7aa-4dca-be8b-faaea01d1e6e" />
+
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/b938b70a-fe35-49d1-b4d4-41ded653b212" />
+
+<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/5696bb1d-fe34-46cf-8e50-1717ad40a6ad" />
+
+
+<img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/e631b47f-1551-474e-a24d-a2db374c0146" />
+
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/8aba5e5a-727f-468d-9588-4368bc970bf0" />
+
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/340486a1-61f0-417c-ad88-93dbab508b20" />
+
+
+curl 'https://confluent.cloud/api/check_jwt' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -b 'ajs_anonymous_id=368f3086-63cf-4970-95d0-30817dfe98e3; __stripe_mid=075e474e-92cb-4fe1-8ba1-d4c479b0ada8a2360b; ajs_user_id=3301562; ajs_group_id=Organization:d9922364-7769-428e-8089-322eda2f1acf; __stripe_sid=09a3a6f3-6fbd-4d3f-8a02-55768ecd48aab03b44; _legacy_auth0.l2hOp0S0tkSB0TFtvIYfZZ9EaKFvrSc6.is.authenticated=true; auth0.l2hOp0S0tkSB0TFtvIYfZZ9EaKFvrSc6.is.authenticated=true; auth_token=eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXV0aC1zdGF0aWMuY29uZmx1ZW50LmlvL2p3a3MiLCJraWQiOiJiNzk4YjRkMy05Y2VkLTExZjAtYjU1Zi1hMmM0NmI4ZjU2ZWMiLCJ0eXAiOiJKV1QifQ.eyJvcmdhbml6YXRpb25JZCI6NTU1NjM4LCJvcmdSZXNvdXJjZUlkIjoiZDk5MjIzNjQtNzc2OS00MjhlLTgwODktMzIyZWRhMmYxYWNmIiwidXNlcklkIjozMzAxNTYyLCJ1c2VyUmVzb3VyY2VJZCI6InUteHowMG5rIiwic2NvcGUiOiJodHRwczovL2FwaS5jb25mbHVlbnQuY2xvdWQvIiwiYXVkIjoiQ09OVFJPTF9QTEFORSIsImV4cCI6MTc1OTM3OTk2MywianRpIjoiZTRkMzViNWItYmYxMS00M2VmLWIzNjQtZTRhNTA0NWU4ZTU4IiwiaWF0IjoxNzU5Mzc5NjYzLCJpc3MiOiJDb25mbHVlbnQiLCJzdWIiOiJ1LXh6MDBuayIsIm1heV9hY3QiOnsicHJpbmNpcGFscyI6WyJ1LXh6MDBuayJdfX0.rEypmNhv3V5Ty10nTqF8pWCpJuW3dQRbFVAVWjPp1GXiY4Du65EkwUHxJg0VPzfjX_K5XftSUBJXncWWr6Dm3IVNv60Cl-OwtUHAfPcSR4ZzkfMD1cIs3olOURhZcJT4T1rdHyhX7jFQDpniZ3ORtglaWc_fpbdwKKZWSHOlSIGhecPyw5cxokYzixLZHpYJ184H7Q0sICSZw62iJRxjlrWZbMJ-K0kc2p6M90FWo_05KhjZriDFwKFiDBOqOEbvFNuyHSm0pjKld3v4xAsnCYLM844iDGAd_5_EnvL992Ue8CNrAQwFy2-qPdzBXqb6BFREBKaaKnfiJ_hwup1k4g; _dd_s=rum=2&id=6418547f-2944-42fa-890d-ee6fcf5ec636&created=1759377802192&expire=1759380664219' \
+  -H 'priority: u=1, i' \
+  -H 'sec-ch-ua: "Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'traceparent: 00-000000000000000012aecc5e3eadae64-429c067f7dcef806-01' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36' \
+  -H 'x-client-request-id: 83816230-4551-4081-916b-16a4c2741883' \
+  -H 'x-datadog-origin: rum' \
+  -H 'x-datadog-parent-id: 4799718447511435270' \
+  -H 'x-datadog-sampling-priority: 1' \
+  -H 'x-datadog-trace-id: 1346238043780918884'
+
+  
