@@ -283,7 +283,9 @@ Here are the steps to shutdown the application.
 
 ## Final result:
 
-<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/31108e4e-eea7-4816-8cb0-3c4dc3f5fd12" />
+<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/e918706b-5936-4dd9-9650-998244ff24a5" />
+
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/417f84be-458b-4b8d-aeba-4fdce547ee03" />
 
 
 ---
