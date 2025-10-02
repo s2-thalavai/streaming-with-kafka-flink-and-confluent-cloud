@@ -286,3 +286,9 @@ Here are the steps to shutdown the application.
 
 
 <img width="1918" height="971" alt="image" src="https://github.com/user-attachments/assets/073737c1-a70c-43f2-a4c5-7eb6193f6456" />
+
+---
+
+## Kafka Fundamentals
+
+<img width="1603" height="902" alt="image" src="https://github.com/user-attachments/assets/40903957-bbc3-404e-bc84-ae4329731826" />
